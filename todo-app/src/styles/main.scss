@@ -1,0 +1,66 @@
+@import "components";
+
+* {
+    padding: 0;
+    margin: 0;
+    color: $MY_WHITE;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $MY_BLACK;
+}
+
+.wrapper {
+    border-radius: 15px;
+    background-color: $MY_GREY;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    padding: 1rem;
+    gap: 1rem;
+
+    &__add {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+
+        &__input {
+            color: $MY_BLACK;
+
+            &::placeholder {
+                color: $MY_GREY;
+            }
+        }
+    }
+
+    &__tasks {
+        gap: 1rem;
+    }
+}
+
+.task {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    gap: 1rem;
+
+    &__text {
+        white-space: nowrap;
+    }
+
+    &__svg {
+        width: 20px;
+        @include clickable();
+    }
+}
