@@ -30,9 +30,11 @@ body {
 
     &__add {
         display: flex;
-        flex-flow: row;
+        flex-flow: column;
         align-items: center;
         justify-content: space-between;
+
+        gap: 0.75rem;
 
         &__input {
             color: $MY_BLACK;
@@ -41,10 +43,23 @@ body {
                 color: $MY_GREY;
             }
         }
+
+        &__submit {
+            @include button();
+        }
     }
 
     &__tasks {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
         gap: 1rem;
+
+        width: 100%;
+
+        border-top: 2px solid $MY_WHITE;
+        padding-top: 1rem;
     }
 }
 
@@ -59,8 +74,16 @@ body {
         white-space: nowrap;
     }
 
+    &__input {
+        color: $MY_BLACK;
+    }
+
     &__svg {
         width: 20px;
         @include clickable();
+    }
+
+    &__edit {
+        @include button();
     }
 }
