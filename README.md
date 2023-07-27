@@ -3,13 +3,12 @@ This repo is a small assignement from  [the odin project]([https://www.theodinpr
 
 # 🖥️ demo
 The project was deployed on Vercel, you can check it out [here](top-legacy-todo.vercel.app)!
-<img
-  src="./screenshot.png"
-  alt="screenshot of the app"
-  style="margin-top: 3rem; max-width: 300px; border: 2px solid #FFFFFF">
+
+<img width="497" alt="screenshot" src="https://github.com/codeScourge/TOP-legacy-todo/assets/91263900/2c512077-f072-40fb-9a23-fa7361b250e0">
 
 # 🪼 what I learned
   1.  how to read and write legacy React code
   2.  refreshed and build a solid foundation in using JavaScript Objects
   3.  deepened my understanding of the JavaScript class syntax
   4.  gave me insights in how ReactJS works under the hood
+
