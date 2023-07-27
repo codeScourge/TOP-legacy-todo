@@ -9,10 +9,10 @@ class TextField extends Component {
     this.editFunction = props.editFunction;
 
     // the initial text
-    this.initialText = props.initialText;
 
     this.state = {
-      input: props.initialText
+      input: props.initialText,
+      initialText: props.initialText,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -20,12 +20,17 @@ class TextField extends Component {
   }
 
   handleSubmit() {
-    this.editFunction(this.initialText, this.state.input);
+    this.editFunction(this.state.initialText, this.state.input);
+    this.setState(state => ({
+      input: state.input,
+      initialText: state.input,
+    }))
   }
 
   handleChange(event) {
     this.setState((state) => ({
-      input: event.target.value
+      input: event.target.value,
+      initialText: state.initialText,
     }));
   }
 
@@ -49,6 +54,7 @@ class TodoApp extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.editTask = this.editTask.bind(this);
   }
 
   handleDelete(event) {
