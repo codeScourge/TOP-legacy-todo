@@ -13,10 +13,12 @@ class TextField extends Component {
     this.state = {
       input: props.initialText,
       initialText: props.initialText,
+      visible: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
   handleSubmit() {
@@ -24,6 +26,15 @@ class TextField extends Component {
     this.setState(state => ({
       input: state.input,
       initialText: state.input,
+      visible: false,
+    }))
+  }
+
+  handleEdit() {
+    this.setState(state => ({
+      input: state.input,
+      initialText: state.initialText,
+      visible: true,
     }))
   }
 
@@ -31,13 +42,14 @@ class TextField extends Component {
     this.setState((state) => ({
       input: event.target.value,
       initialText: state.initialText,
+      visible: state.visible
     }));
   }
 
   render() {
     return  <>
-               <input className='task__input' value={this.state.input} onChange={this.handleChange} type="text"/>
-               <button className='task__edit' onClick={this.handleSubmit}>edit</button>
+               <input className='task__input' value={this.state.input} style={{display: this.state.visible ? "flex" : "none"}} onChange={this.handleChange} type="text"/>
+               <button className='task__edit' onClick={this.state.visible ? this.handleSubmit : this.handleEdit}>{this.state.visible ? "resubmit" : "edit"}</button>
             </>
   }
 }
