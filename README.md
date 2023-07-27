@@ -2,7 +2,7 @@
 This repo is a small assignement from  [the odin project]([https://www.theodinproject.com/lessons/node-path-react-new-class-based-components](https://www.theodinproject.com/lessons/node-path-react-new-class-based-components)), which had us build a todo-app with typical features such as adding, deleting, and editing tasks, all while using legacy (class based) ReactJS code.
 
 # 🖥️ demo
-The project was deployed on Vercel, you can check it out [here](top-legacy-todo.vercel.app)!
+The project was deployed on Vercel, you can check it out [here](http://top-legacy-todo.vercel.app)!
 
 <img width="497" alt="screenshot" src="https://github.com/codeScourge/TOP-legacy-todo/assets/91263900/2c512077-f072-40fb-9a23-fa7361b250e0">
 
