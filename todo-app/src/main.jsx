@@ -1,10 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import TodoApp from "./todo"
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import Router from './components/routing/router';
+
 import "./styles/main.scss"
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <TodoApp title="My ToDo-App"></TodoApp>
+    <Router></Router>
   </React.StrictMode>,
 )

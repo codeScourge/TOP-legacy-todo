@@ -1,5 +1,6 @@
 import React from 'react'
 import { Component } from 'react'
+import {Link} from "react-router-dom";
 import PropTypes from "prop-types"
 
 class TextField extends Component {
@@ -117,7 +118,13 @@ class TodoApp extends Component {
   }
 
   render() {
-    return  <div className='wrapper'>
+    return  <>
+              <div className="nav">
+                <Link to="/" className="nav__element">home</Link>
+                <Link to="/todo" className="nav__element">todo</Link>
+              </div>
+
+            <div className='wrapper'>
               <h3 className="wrapper__title">{this.props.title}</h3>
 
               <h5 className="wrapper__counter">number of tasks: {this.state.tasks.length}</h5>
@@ -138,6 +145,8 @@ class TodoApp extends Component {
                                                                 </li>})}
               </ul>
             </div>
+            </>
+
   }
 }
 
