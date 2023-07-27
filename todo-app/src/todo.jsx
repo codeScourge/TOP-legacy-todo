@@ -1,5 +1,6 @@
 import React from 'react'
 import { Component } from 'react'
+import PropTypes from "prop-types"
 
 class TextField extends Component {
   constructor(props) {
@@ -52,6 +53,11 @@ class TextField extends Component {
                <button className='task__edit' onClick={this.state.visible ? this.handleSubmit : this.handleEdit}>{this.state.visible ? "resubmit" : "edit"}</button>
             </>
   }
+}
+
+TextField.propTypes = {
+  editFunction: PropTypes.func,
+  initialText: PropTypes.string,
 }
 
 class TodoApp extends Component {
@@ -133,6 +139,10 @@ class TodoApp extends Component {
               </ul>
             </div>
   }
+}
+
+TodoApp.propTypes = {
+  title: PropTypes.string,
 }
 
 export default TodoApp

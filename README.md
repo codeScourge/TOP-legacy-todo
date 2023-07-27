@@ -11,4 +11,5 @@ The project was deployed on Vercel, you can check it out [here](http://top-legac
   2.  refreshed and build a solid foundation in using JavaScript Objects
   3.  deepened my understanding of the JavaScript class syntax
   4.  gave me insights in how ReactJS works under the hood
+  5.  How to add types to my React components using the "prop-types" library
 
